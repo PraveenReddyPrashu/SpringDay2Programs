@@ -1,8 +1,11 @@
 package aop.main;
 
+import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
+
+import aop.model.Circle;
 
 @Aspect
 public class LoggingAspect {
@@ -23,9 +26,27 @@ public class LoggingAspect {
 		//@Before("execution(* aop..*.get*())")  == 	@Before("allGetters()")
 		
 		@Before("allCircleMethods()")
-		public void loggingAdvice() {
-			System.out.println("writing log before method is executed");
+		public void loggingAdvice(JoinPoint joinPoint) {
+			String methodName = joinPoint.toLongString();
+			if(methodName.contains("getDia")) {
+				Circle circle = (Circle) joinPoint.getTarget();
+				System.out.println(circle.getName());
+			System.out.println("writing log for getdia method b4 its executed");
+			}
+			else 
+				if(methodName.contains("setName")) {
+					System.out.println("writing log for setName method b4 its executed");
+
+				}
 		}
+
+		@Pointcut("execution(* aop..*.get*())")
+		public void allGetters() {}
+		
+		@Pointcut("within(aop.model.Circle)")
+		public void allCircleMethods() {}
+		
+		
 
 		/*
 		 * @Before("execution(* aop..*.get*())") public void secondAdviceforAllGetters()
@@ -36,10 +57,4 @@ public class LoggingAspect {
 		 * @Before("allGetters") public void thirdAdviceforAllGetters() {
 		 * System.out.println("third log before method is executed"); }
 		 */
-		
-		@Pointcut("execution(* aop..*.get*())")
-		public void allGetters() {}
-		
-		@Pointcut("within(aop.model.Circle)")
-		public void allCircleMethods() {}
 }
