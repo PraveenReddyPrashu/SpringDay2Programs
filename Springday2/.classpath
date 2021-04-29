@@ -36,7 +36,7 @@
 	<classpathentry kind="lib" path="C:/Users/prave/Downloads/spring-5.3.6-dist/spring-framework-5.3.6/libs/spring-jcl-5.3.6.jar"/>
 	<classpathentry kind="lib" path="C:/Users/prave/Downloads/spring-5.3.6-dist/spring-framework-5.3.6/libs/spring-jcl-5.3.6-javadoc.jar"/>
 	<classpathentry kind="lib" path="C:/Users/prave/Downloads/spring-5.3.6-dist/spring-framework-5.3.6/libs/spring-jcl-5.3.6-sources.jar"/>
-	<classpathentry kind="lib" path="C:/Users/prave/Downloads/spring-5.3.6-dist/spring-framework-5.3.6/libs/spring-jdbc-5.3.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/prave/Downloads/spring-5.3.6-dist/spring-framework-5.3.6/libs/spring-jdbc-5.3.6.jar" sourcepath="C:/Users/prave/Downloads/spring-5.3.6-dist/spring-framework-5.3.6/libs/spring-jdbc-5.3.6-sources.jar"/>
 	<classpathentry kind="lib" path="C:/Users/prave/Downloads/spring-5.3.6-dist/spring-framework-5.3.6/libs/spring-jdbc-5.3.6-javadoc.jar"/>
 	<classpathentry kind="lib" path="C:/Users/prave/Downloads/spring-5.3.6-dist/spring-framework-5.3.6/libs/spring-jdbc-5.3.6-sources.jar"/>
 	<classpathentry kind="lib" path="C:/Users/prave/Downloads/spring-5.3.6-dist/spring-framework-5.3.6/libs/spring-jms-5.3.6.jar"/>
